@@ -31,6 +31,7 @@ PRIME NUMBERS\n
 =============\n
 """)
 while requested
+  previousPrimeNumber = currentPrimeNumber;
   global currentPrimeNumber = nextPrimeNumber(currentPrimeNumber);
   println("The $(primeNumberIdx == 0 ? "1st" : "next($(primeNumberIdx + 1))") prime number is: $(currentPrimeNumber)")
   println("Would you like the next one ?")
@@ -42,6 +43,8 @@ while requested
     global primeNumberIdx+=1;
   elseif lcUserRequest == "no" || lcUserRequest == "n"
     global requested = false;
+  else
+    global currentPrimeNumber = previousPrimeNumber;
   end
 end
 println("Bye bye!")
