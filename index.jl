@@ -96,6 +96,7 @@ println("[ARRAYS/InitializingArray/Any] fill(\"\", (3, 3)) $(string(fill("", (3,
 println("[ARRAYS/ConvertionFromRange] collect(1:13) get all numbers from 1 to 13: $(collect(1:13))")
 println("[ARRAYS/ConvertionFromRangeWithStep] collect(1:25:100) gets all numbers from 0 to 100 with a step of 25: $(collect(0:25:100))")
 println("[ARRAYS/InclusionCheck] Is 1 included in [3,1,4] ? $(1 in [3,1,4])")
+println("[ARRAYS/SpreadOperator] $((bla(x,y)=x+y; args=[1,2];)) bla(x,y)=x+y; args=[1,2]; f(args...) = $(bla(args...)) ")
 println("\n");
 println("[TUPLES/Initialization/Ex1] \"x=(5,5)\" is of type $(typeof((5,5)))");
 println("[TUPLES/Initialization/Ex2] \"x=(3,true,\"bla\")\" is of type $(typeof((3,true, "bla")))");
